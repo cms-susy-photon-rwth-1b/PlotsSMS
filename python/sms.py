@@ -7,7 +7,50 @@ class sms():
         if modelname.find("T5ttttDM175") != -1: self.T5ttttDM175()
         if modelname.find("T1bbbb") != -1: self.T1bbbb()
         if modelname.find("T1qqqq") != -1: self.T1qqqq()
+        if modelname.find("T5gg") != -1: self.T5gg()
+        if modelname.find("T5Wg") != -1: self.T5Wg()
 
+    def T5gg(self):
+        # model name
+        self.modelname = "T5gg"
+        # decay chain
+        lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma#tilde{G}"%(lsp_s,lsp_s)
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 950.
+        self.Xmax = 2050.
+        self.Ymin = 0.
+        self.Ymax = 2500.
+        self.Zmin = 0.001
+        self.Zmax = 2.
+        # produce sparticle
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
+        # LSP
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
+        # turn off diagonal lines
+        self.diagOn = False
+
+    def T5Wg(self):
+        # model name
+        self.modelname = "T5Wg"
+        # decay chain
+        lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0/#pm}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{\pm}#tilde{G}"%(lsp_s,lsp_s)
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 750.
+        self.Xmax = 1600.
+        self.Ymin = 0.
+        self.Ymax = 2000.
+        self.Zmin = 0.001
+        self.Zmax = 2.
+        # produce sparticle
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
+        # LSP
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
+        # turn off diagonal lines
+        self.diagOn = False
 
     def T1tttt(self):
         # model name
