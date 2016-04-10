@@ -39,7 +39,7 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 950.
+        self.Xmin = 750.
         self.Xmax = 2100.
         self.Ymin = 0.
         self.Ymax = 2400.
