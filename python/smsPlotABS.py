@@ -180,6 +180,11 @@ class smsPlotABS(object):
 
         textObs = rt.TLatex(self.model.Xmin+11*xRange/100, self.model.Ymax-1.50*yRange/100*10+offset, 
                             "Observed #pm 1 #sigma_{theory}")
+        if self.model.modelname == "T5gg":
+            textObs = rt.TLatex(self.model.Xmin+11*xRange/100, self.model.Ymax-1.50*yRange/100*10+offset, 
+                            "SUS-15-012(#gamma#gamma) Expected")
+
+
         textObs.SetTextFont(42)
         textObs.SetTextSize(0.040)
         textObs.Draw()
