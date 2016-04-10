@@ -19,11 +19,11 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 950.
-        self.Xmax = 2050.
+        self.Xmax = 2100.
         self.Ymin = 0.
-        self.Ymax = 2300.
-        self.Zmin = 0.001
-        self.Zmax = 2.
+        self.Ymax = 2400.
+        self.Zmin = 0.003
+        self.Zmax = 0.02
         # produce sparticle
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
@@ -36,15 +36,15 @@ class sms():
         self.modelname = "T5Wg"
         # decay chain
         lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0/#pm}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
-        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{\pm}#tilde{G}"%(lsp_s,lsp_s)
+        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 750.
-        self.Xmax = 1600.
+        self.Xmin = 950.
+        self.Xmax = 2100.
         self.Ymin = 0.
-        self.Ymax = 2000.
-        self.Zmin = 0.001
-        self.Zmax = 2.
+        self.Ymax = 2400.
+        self.Zmin = 0.003
+        self.Zmax = 0.02
         # produce sparticle
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
