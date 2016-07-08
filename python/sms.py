@@ -9,6 +9,7 @@ class sms():
         if modelname.find("T1qqqq") != -1: self.T1qqqq()
         if modelname.find("T5gg") != -1: self.T5gg()
         if modelname.find("T5Wg") != -1: self.T5Wg()
+        if modelname.find("GGM") != -1: self.GGM()
 
     def T5gg(self):
         # model name
@@ -55,6 +56,28 @@ class sms():
         self.diagOn = True
         self.diagX = array('d',[700,1500,2000])
         self.diagY = array('d',[700,1500,2000])
+
+    def GGM(self):
+        # model name
+        self.modelname = "GGM"
+        # decay chain
+        self.label= "GGM"
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 205-12.5
+        self.Xmax = 1005+12.5
+        self.Ymin = 215-12.5
+        self.Ymax = 1015+12.5
+        self.Zmin = 0.001
+        self.Zmax = 2.
+        # produce sparticle
+        self.sParticle = "m_{#tilde{B}} [GeV]"
+        # LSP
+        self.LSP = "m_{#tilde{W}} [GeV]"
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[1000,1500,2000])
+        self.diagY = array('d',[1000,1500,2000])
 
     def T1tttt(self):
         # model name
