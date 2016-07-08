@@ -38,7 +38,7 @@ class sms():
         self.modelname = "T5Wg"
         # decay chain
         lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0/#pm}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
-        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{\pm}#tilde{G}"%(lsp_s,lsp_s)
+        self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
         self.Xmin = 750.
