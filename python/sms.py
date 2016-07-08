@@ -28,8 +28,10 @@ class sms():
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
-        # turn off diagonal lines
-        self.diagOn = False
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[1000,1500,2000])
+        self.diagY = array('d',[1000,1500,2000])
 
     def T5Wg(self):
         # model name
@@ -49,8 +51,10 @@ class sms():
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
-        # turn off diagonal lines
-        self.diagOn = False
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[700,1500,2000])
+        self.diagY = array('d',[700,1500,2000])
 
     def T1tttt(self):
         # model name
