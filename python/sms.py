@@ -19,8 +19,8 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 1125.
-        self.Xmax = 2050.
+        self.Xmin = 1275.
+        self.Xmax = 1950.
         self.Ymin = 0.
         self.Ymax = 2500.
         self.Zmin = 0.001
@@ -42,10 +42,10 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 750.
-        self.Xmax = 1600.
+        self.Xmin = 1200.
+        self.Xmax = 1950.
         self.Ymin = 0.
-        self.Ymax = 2000.
+        self.Ymax = 2500.
         self.Zmin = 0.001
         self.Zmax = 2.
         # produce sparticle
@@ -65,9 +65,10 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 205-12.5
-        self.Xmax = 1005+12.5
-        self.Ymin = 215-12.5
-        self.Ymax = 1015+12.5
+        self.Xmax = 840+12.5
+        self.Ymin = 390-12.5
+        # self.Ymax = 1015+12.5
+        self.Ymax = 900
         self.Zmin = 0.001
         self.Zmax = 2.
         # produce sparticle
@@ -76,8 +77,8 @@ class sms():
         self.LSP = "m_{#tilde{W}} [GeV]"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[1000,1500,2000])
-        self.diagY = array('d',[1000,1500,2000])
+        self.diagX = array('d',[200,500,1000])
+        self.diagY = array('d',[200,500,1000])
 
     def T1tttt(self):
         # model name
