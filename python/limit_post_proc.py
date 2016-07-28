@@ -29,20 +29,20 @@ def post_process(scan):
     c.Draw()
     c.cd()
 
+    l=rt.TLatex()
     if scan=="GGM":
-        ax,ay=.18,.32
-        ex,ey=.31,.15
+        l.SetTextAngle(55)
+        ax,ay=.18,.28
+        ex,ey=.32,.15
     elif scan=="T5gg":
         ax,ay=.54,.25
-        ex,ey=.20,.36
+        ex,ey=.20,.42
     elif scan=="T5Wg":
-        ax,ay=.31,.16
-        ex,ey=.28,.44
-    l=rt.TLatex()
+        ax,ay=.54,.25
+        ex,ey=.22,.45
     l.SetNDC(True)
     l.SetTextSize(.04)
     l.SetTextFont(52)
-    l.SetTextAngle(45)
     l.DrawLatex(ex,ey,"excluded")
     l.DrawLatex(ax,ay,"allowed")
     # raw_input("...")
