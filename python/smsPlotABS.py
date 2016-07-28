@@ -139,6 +139,7 @@ class smsPlotABS(object):
     def Save(self,label):
         # save the output
         self.c.SaveAs("%s.pdf" %label)
+        self.c.SaveAs("%s.root" %label)
         
     def DrawLegend(self):
         if(self.model.label2 == ""):
