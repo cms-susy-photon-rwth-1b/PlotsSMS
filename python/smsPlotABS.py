@@ -78,7 +78,10 @@ class smsPlotABS(object):
         graphWhite.SetLineWidth(3)
         graphWhite.SetPoint(0,self.model.Xmin, self.model.Ymax)
         graphWhite.SetPoint(1,self.model.Xmax, self.model.Ymax)
-        if(self.model.label2 == ""):
+        if (self.model.modelname=="GGM"):
+            graphWhite.SetPoint(2,self.model.Xmax, self.model.Ymax*0.85)
+            graphWhite.SetPoint(3,self.model.Xmin, self.model.Ymax*0.85)
+        elif(self.model.label2 == ""):
             graphWhite.SetPoint(2,self.model.Xmax, self.model.Ymax*0.75)
             graphWhite.SetPoint(3,self.model.Xmin, self.model.Ymax*0.75)
         else:
@@ -105,7 +108,7 @@ class smsPlotABS(object):
         self.c.textCMS = textCMS
         # MODEL LABEL
         if(self.model.label2 == ""):
-            textModelLabel= rt.TLatex(0.15,0.90,"%s   NLO+NLL exclusion" %self.model.label)
+            textModelLabel= rt.TLatex(0.15,0.90,"%s" %self.model.label)
             textModelLabel.SetNDC()
             textModelLabel.SetTextAlign(13)
             textModelLabel.SetTextFont(42)
@@ -128,17 +131,20 @@ class smsPlotABS(object):
             textModelLabel2.Draw()
             self.c.textModelLabel2 = textModelLabel2
         # NLO NLL XSEC
-        textNLONLL= rt.TLatex(0.16,0.32,"NLO-NLL exclusion")
+        textNLONLL= rt.TLatex(0.16,0.70,"NLO-NLL exclusion")
+        if (self.model.modelname=="GGM"):
+            textNLONLL= rt.TLatex(0.55,0.20,"NLO exclusion")
         textNLONLL.SetNDC()
         textNLONLL.SetTextAlign(13)
         textNLONLL.SetTextFont(42)
         textNLONLL.SetTextSize(0.04)
         textNLONLL.Draw()
-        #self.c.textNLONLL = textNLONLL
+        self.c.textNLONLL = textNLONLL
 
     def Save(self,label):
         # save the output
         self.c.SaveAs("%s.pdf" %label)
+        self.c.SaveAs("%s.root" %label)
         
     def DrawLegend(self):
         if(self.model.label2 == ""):

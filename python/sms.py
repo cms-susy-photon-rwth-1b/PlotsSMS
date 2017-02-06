@@ -9,6 +9,7 @@ class sms():
         if modelname.find("T1qqqq") != -1: self.T1qqqq()
         if modelname.find("T5gg") != -1: self.T5gg()
         if modelname.find("T5Wg") != -1: self.T5Wg()
+        if modelname.find("GGM") != -1: self.GGM()
 
     def T5gg(self):
         # model name
@@ -18,18 +19,20 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 950.
-        self.Xmax = 2100.
+        self.Xmin = 1275.
+        self.Xmax = 1950.
         self.Ymin = 0.
-        self.Ymax = 2400.
-        self.Zmin = 0.003
-        self.Zmax = 0.02
+        self.Ymax = 2500.
+        self.Zmin = 0.001
+        self.Zmax = 2.
         # produce sparticle
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
-        # turn off diagonal lines
+        # diagonal lines
         self.diagOn = True
+        self.diagX = array('d',[1000,1500,2000])
+        self.diagY = array('d',[1000,1500,2000])
 
     def T5Wg(self):
         # model name
@@ -39,18 +42,43 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 800.
-        self.Xmax = 2100.
-        self.Ymin = 0
+        self.Xmin = 1200.
+        self.Xmax = 1950.
+        self.Ymin = 0.
         self.Ymax = 2500.
-        self.Zmin = -1
-        self.Zmax = -1
+        self.Zmin = 0.001
+        self.Zmax = 2.
         # produce sparticle
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
-        # turn off diagonal lines
+        # diagonal lines
         self.diagOn = True
+        self.diagX = array('d',[700,1500,2000])
+        self.diagY = array('d',[700,1500,2000])
+
+    def GGM(self):
+        # model name
+        self.modelname = "GGM"
+        # decay chain
+        self.label= "GGM"
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 205-12.5
+        self.Xmax = 840+12.5
+        self.Ymin = 390-12.5
+        # self.Ymax = 1015+12.5
+        self.Ymax = 900
+        self.Zmin = 0.001
+        self.Zmax = 2.
+        # produce sparticle
+        self.sParticle = "m_{#tilde{B}} [GeV]"
+        # LSP
+        self.LSP = "m_{#tilde{W}} [GeV]"
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[200,500,1000])
+        self.diagY = array('d',[200,500,1000])
 
     def T1tttt(self):
         # model name
