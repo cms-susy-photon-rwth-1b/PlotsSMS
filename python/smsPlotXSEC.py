@@ -23,8 +23,8 @@ class smsPlotXSEC(smsPlotABS):
         self.histo.GetZaxis().SetTitleFont(42)
         self.histo.GetZaxis().SetLabelSize(0.035)
         self.histo.GetZaxis().SetTitleSize(0.035)
-        self.histo.SetMinimum(self.model.Zmin)
-        self.histo.SetMaximum(self.model.Zmax)
+        self.histo.SetMinimum(self.model.Zmin if self.model.Zmin > 0 else self.histo.GetMinimum())
+        self.histo.SetMaximum(self.model.Zmax if self.model.Zmax > 0 else self.histo.GetMaximum())
 
         # define the palette for z axis
         NRGBs = 5
