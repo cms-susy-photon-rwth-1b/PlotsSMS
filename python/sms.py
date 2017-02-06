@@ -39,12 +39,12 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 750.
+        self.Xmin = 800.
         self.Xmax = 2100.
-        self.Ymin = 0.
-        self.Ymax = 2400.
-        self.Zmin = 0.003
-        self.Zmax = 0.02
+        self.Ymin = 0
+        self.Ymax = 2500.
+        self.Zmin = -1
+        self.Zmax = -1
         # produce sparticle
         self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
         # LSP
