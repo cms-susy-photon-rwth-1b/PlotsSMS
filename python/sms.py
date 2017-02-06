@@ -72,7 +72,7 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
         # turn off diagonal lines
         self.diagOn = False
-        
+
     def T5ttttDM175(self):
         # model name
         self.modelname = "T5ttttDM175"
@@ -93,7 +93,7 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
         # turn off diagonal lines
         self.diagOn = False
-        
+
     def T1bbbb(self):
         # model name
         self.modelname = "T1bbbb"
