@@ -185,7 +185,7 @@ class smsPlotABS(object):
         LObsM.SetPoint(1,self.model.Xmin+10*xRange/100, self.model.Ymax-1.50*yRange/100*10+offset)
 
         textObs = rt.TLatex(self.model.Xmin+11*xRange/100, self.model.Ymax-1.50*yRange/100*10+offset, 
-                            "Observed #pm 1 #sigma_{theory}")
+                            "Observed #pm 1 s.d._{theory}")
         if self.model.modelname == "T5gg":
             textObs = rt.TLatex(self.model.Xmin+11*xRange/100, self.model.Ymax-1.50*yRange/100*10+offset, 
                             "SUS-15-012(#gamma#gamma) Expected")
@@ -227,7 +227,7 @@ class smsPlotABS(object):
         LExpM.SetPoint(1,self.model.Xmin+10*xRange/100, self.model.Ymax-2.15*yRange/100*10+offset)
 
         textExp = rt.TLatex(self.model.Xmin+11*xRange/100, self.model.Ymax-2.15*yRange/100*10+offset, 
-                            "Expected #pm 1 #sigma_{experiment}")
+                            "Expected #pm 1 s.d._{experiment}")
         textExp.SetTextFont(42)
         textExp.SetTextSize(0.040)
         textExp.Draw()
