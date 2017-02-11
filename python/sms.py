@@ -16,7 +16,55 @@ class sms():
         if modelname.find("T1qqqq") != -1: self.T1qqqq()
         if modelname.find("T5gg") != -1: self.T5gg()
         if modelname.find("T5Wg") != -1: self.T5Wg()
+        if modelname.find("T6gg") != -1: self.T6gg()
+        if modelname.find("T6Wg") != -1: self.T6Wg()
         if modelname.find("GGM") != -1: self.GGM()
+
+    def T6gg(self):
+        # model name
+        self.modelname = "T6gg"
+        # decay chain
+        lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        self.label= "pp #rightarrow #tilde{q}#tilde{q}, #tilde{q} #rightarrow q%s, %s #rightarrow #gamma#tilde{G}"%(lsp_s,lsp_s)
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 1100.
+        self.Xmax = 1900.
+        self.Ymin = 0.
+        self.Ymax = 2500.
+        self.Zmin = squarkZmin
+        self.Zmax = squarkZmax
+        # produce sparticle
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{q}}}} (GeV)"
+        # LSP
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[1000,1500,2000])
+        self.diagY = array('d',[1000,1500,2000])
+
+    def T6Wg(self):
+        # model name
+        self.modelname = "T6Wg"
+        # decay chain
+        lsp_s = "#lower[-0.12]{#tilde{#chi}}#lower[0.2]{#scale[0.85]{^{0/#pm}}}#kern[-1.3]{#scale[0.85]{_{1}}}"
+        self.label= "pp #rightarrow #tilde{q}#tilde{q}, #tilde{q} #rightarrow q%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
+        self.label2= "";
+        # scan range to plot
+        self.Xmin = 1100.
+        self.Xmax = 1900.
+        self.Ymin = 0.
+        self.Ymax = 2500.
+        self.Zmin = squarkZmin
+        self.Zmax = squarkZmax
+        # produce sparticle
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{q}}}} (GeV)"
+        # LSP
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
+        # diagonal lines
+        self.diagOn = True
+        self.diagX = array('d',[1000,1500,2000])
+        self.diagY = array('d',[1000,1500,2000])
 
     def T5gg(self):
         # model name
