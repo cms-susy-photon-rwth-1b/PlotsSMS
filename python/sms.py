@@ -1,5 +1,12 @@
 from array import *
 
+commonZmax = 0.1
+commonZmin = -1
+squarkZmin = 1e-3
+squarkZmax = 0.1
+gluinoZmin = 1e-4
+gluinoZmax = 1e-2
+
 class sms():
 
     def __init__(self, modelname):
@@ -19,16 +26,16 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 1275.
-        self.Xmax = 1950.
+        self.Xmin = 1400.
+        self.Xmax = 2300.
         self.Ymin = 0.
-        self.Ymax = 2500.
-        self.Zmin = 0.001
-        self.Zmax = 2.
+        self.Ymax = 2900.
+        self.Zmin = gluinoZmin
+        self.Zmax = gluinoZmax
         # produce sparticle
-        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} (GeV)"
         # LSP
-        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
         self.diagX = array('d',[1000,1500,2000])
@@ -42,16 +49,16 @@ class sms():
         self.label= "pp #rightarrow #tilde{g}#tilde{g}, #tilde{g} #rightarrow qq%s, %s #rightarrow #gamma/W^{#pm}#tilde{G}"%(lsp_s,lsp_s)
         self.label2= "";
         # scan range to plot
-        self.Xmin = 1200.
-        self.Xmax = 1950.
+        self.Xmin = 1400.
+        self.Xmax = 2300.
         self.Ymin = 0.
-        self.Ymax = 2500.
-        self.Zmin = 0.001
-        self.Zmax = 2.
+        self.Ymax = 2900.
+        self.Zmin = gluinoZmin
+        self.Zmax = gluinoZmax
         # produce sparticle
-        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} [GeV]"
+        self.sParticle = "m#kern[0.1]{_{#lower[-0.12]{#tilde{g}}}} (GeV)"
         # LSP
-        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} [GeV]"
+        self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
         self.diagX = array('d',[700,1500,2000])
