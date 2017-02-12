@@ -40,8 +40,6 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[1000,1500,2000])
-        self.diagY = array('d',[1000,1500,2000])
 
     def T6Wg(self):
         # model name
@@ -63,8 +61,6 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[1000,1500,2000])
-        self.diagY = array('d',[1000,1500,2000])
 
     def T5gg(self):
         # model name
@@ -86,8 +82,6 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[1000,1500,2000])
-        self.diagY = array('d',[1000,1500,2000])
 
     def T5Wg(self):
         # model name
@@ -109,8 +103,6 @@ class sms():
         self.LSP = "m#kern[0.1]{_{"+lsp_s+"}} (GeV)"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[700,1500,2000])
-        self.diagY = array('d',[700,1500,2000])
 
     def GGM(self):
         # model name
@@ -132,8 +124,6 @@ class sms():
         self.LSP = "m_{#tilde{W}} [GeV]"
         # diagonal lines
         self.diagOn = True
-        self.diagX = array('d',[200,500,1000])
-        self.diagY = array('d',[200,500,1000])
 
     def T1tttt(self):
         # model name
