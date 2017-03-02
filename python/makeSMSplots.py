@@ -24,10 +24,10 @@ if __name__ == '__main__':
     contPlot = smsPlotCONT(modelname, fileIN.HISTOGRAM, fileIN.OBSERVED, fileIN.EXPECTED, fileIN.ENERGY, fileIN.LUMI, 
                            fileIN.PRELIMINARY, "CONT")
     contPlot.Draw()
-    contPlot.Save("%sCONT" %outputname)
+    #contPlot.Save("%sCONT" %outputname)
 
     # brazilian flag (show only 1 sigma)
     brazilPlot = smsPlotBrazil(modelname, fileIN.HISTOGRAM, fileIN.OBSERVED, fileIN.EXPECTED, fileIN.ENERGY, fileIN.LUMI, 
                                fileIN.PRELIMINARY, "BRAZIL")
     brazilPlot.Draw()
-    brazilPlot.Save("%sBAND" %outputname)
+    #brazilPlot.Save("%sBAND" %outputname)

@@ -23,8 +23,9 @@ class smsPlotXSEC(smsPlotABS):
         self.histo.GetZaxis().SetTitleFont(42)
         self.histo.GetZaxis().SetLabelSize(0.035)
         self.histo.GetZaxis().SetTitleSize(0.035)
-        self.histo.SetMinimum(self.model.Zmin if self.model.Zmin > 0 else self.histo.GetMinimum())
-        self.histo.SetMaximum(self.model.Zmax if self.model.Zmax > 0 else self.histo.GetMaximum())
+        self.histo.Scale(1000) # from pb to fb
+        self.histo.SetMinimum(self.model.Zmin*1000 if self.model.Zmin > 0 else self.histo.GetMinimum())
+        self.histo.SetMaximum(self.model.Zmax*1000 if self.model.Zmax > 0 else self.histo.GetMaximum())
 
         # define the palette for z axis
         NRGBs = 5
@@ -49,7 +50,7 @@ class smsPlotXSEC(smsPlotABS):
         palette.SetLabelSize(0.035)
 
     def DrawPaletteLabel(self):
-        textCOLZ = rt.TLatex(0.98,0.15,"95% CL upper limit on cross section (pb)")
+        textCOLZ = rt.TLatex(0.98,0.15,"95% CL upper limit on cross section (fb)")
         textCOLZ.SetNDC()
         #textCOLZ.SetTextAlign(13)
         textCOLZ.SetTextFont(42)

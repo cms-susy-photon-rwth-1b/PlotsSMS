@@ -1,11 +1,12 @@
 from array import *
 
-commonZmax = 0.1
-commonZmin = -1
-squarkZmin = 1e-3
-squarkZmax = 0.1
-gluinoZmin = 1e-4
-gluinoZmax = 1e-2
+commonZmin = 4e-4
+commonZmax = 5e-2
+
+squarkZmin = commonZmin
+squarkZmax = commonZmax
+gluinoZmin = commonZmin
+gluinoZmax = commonZmax
 
 class sms():
 
@@ -29,9 +30,9 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1100.
-        self.Xmax = 1900.
+        self.Xmax = 2150.
         self.Ymin = 0.
-        self.Ymax = 2500.
+        self.Ymax = 2700.
         self.Zmin = squarkZmin
         self.Zmax = squarkZmax
         # produce sparticle
@@ -50,9 +51,9 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1100.
-        self.Xmax = 1900.
+        self.Xmax = 2150.
         self.Ymin = 0.
-        self.Ymax = 2500.
+        self.Ymax = 2700.
         self.Zmin = squarkZmin
         self.Zmax = squarkZmax
         # produce sparticle
@@ -71,9 +72,9 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1400.
-        self.Xmax = 2300.
+        self.Xmax = 2500.
         self.Ymin = 0.
-        self.Ymax = 2900.
+        self.Ymax = 3100.
         self.Zmin = gluinoZmin
         self.Zmax = gluinoZmax
         # produce sparticle
@@ -92,9 +93,9 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1400.
-        self.Xmax = 2300.
+        self.Xmax = 2500.
         self.Ymin = 0.
-        self.Ymax = 2900.
+        self.Ymax = 3100.
         self.Zmin = gluinoZmin
         self.Zmax = gluinoZmax
         # produce sparticle
