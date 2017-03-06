@@ -1,7 +1,7 @@
 from array import *
 
 commonZmin = 4e-4
-commonZmax = 5e-2
+commonZmax = 2e-2
 
 squarkZmin = commonZmin
 squarkZmax = commonZmax
@@ -30,7 +30,7 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1100.
-        self.Xmax = 2150.
+        self.Xmax = 2050.
         self.Ymin = 0.
         self.Ymax = 2700.
         self.Zmin = squarkZmin
@@ -51,7 +51,7 @@ class sms():
         self.label2= "";
         # scan range to plot
         self.Xmin = 1100.
-        self.Xmax = 2150.
+        self.Xmax = 2050.
         self.Ymin = 0.
         self.Ymax = 2700.
         self.Zmin = squarkZmin
@@ -74,7 +74,7 @@ class sms():
         self.Xmin = 1400.
         self.Xmax = 2500.
         self.Ymin = 0.
-        self.Ymax = 3100.
+        self.Ymax = 3300.
         self.Zmin = gluinoZmin
         self.Zmax = gluinoZmax
         # produce sparticle
@@ -95,7 +95,7 @@ class sms():
         self.Xmin = 1400.
         self.Xmax = 2500.
         self.Ymin = 0.
-        self.Ymax = 3100.
+        self.Ymax = 3300.
         self.Zmin = gluinoZmin
         self.Zmax = gluinoZmax
         # produce sparticle
